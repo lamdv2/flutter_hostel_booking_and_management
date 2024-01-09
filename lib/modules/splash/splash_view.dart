@@ -20,14 +20,14 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-    Timer(
-      const Duration(seconds: 4),
-      () async {
-        final prefs = await SharedPreferences.getInstance();
-        final accessToken = await prefs.getString(StorageConstants.token);
-        Get.offAllNamed(accessToken != null ? Routes.HOME : Routes.LOG_IN);
-      },
-    );
+    // Timer(
+    //   const Duration(seconds: 4),
+    //   () async {
+    //     final prefs = await SharedPreferences.getInstance();
+    //     final accessToken = await prefs.getString(StorageConstants.token);
+    //     Get.offAllNamed(accessToken != null ? Routes.HOME : Routes.LOG_IN);
+    //   },
+    // );
   }
 
   @override

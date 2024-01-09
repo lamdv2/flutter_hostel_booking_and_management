@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_base/app_controller.dart';
+import 'package:flutter_getx_base/modules/home/home_screen.dart';
 import 'package:flutter_getx_base/shared/constants/common.dart';
 import 'package:flutter_getx_base/shared/widgets/custom_bottom_navigation_bar.dart';
 import 'package:get/get.dart';
@@ -81,7 +82,7 @@ class HomeScreen extends GetView<HomeController> {
 
   List<Widget> _widgetOptions() {
     return [
-      Center(child: Text("Screen 1")),
+      HomeTabScreen(),
       Center(child: Text("Screen 2")),
       Center(child: Text("Screen 3")),
       Center(child: Text("Screen 4")),

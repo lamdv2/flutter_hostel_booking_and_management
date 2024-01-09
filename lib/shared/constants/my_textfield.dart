@@ -80,7 +80,7 @@ class _MyTextFieldState extends State<MyTextField> {
         labelStyle: TextStyle(
           color: appController.isDarkModeOn.value
               ? ColorConstants.white.withOpacity(.4)
-              : ColorConstants.gray300,
+              : ColorConstants.gray200,
           fontWeight: FontWeight.w400,
         ),
         focusedErrorBorder: OutlineInputBorder(

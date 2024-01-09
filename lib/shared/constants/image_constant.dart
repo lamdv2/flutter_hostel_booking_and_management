@@ -150,4 +150,7 @@ class ImageConstant {
       'assets/icons/svg/ic_travel_building.svg';
   static const String icDarkMode = 'assets/icons/svg/ic_dark_mode_profile.svg';
 
+  static const String imgSplash1 = 'assets/icons/img_splash1.png';
+  static const String imgSplash2 = 'assets/icons/img_splash2.png';
+  static const String imgSplash3 = 'assets/icons/img_splash3.png';
 }

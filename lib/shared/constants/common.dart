@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CommonConstants {
+  static const String keyIntro = 'introScreen';
+  static const String checkIntro = 'haveIntroScreen';
+  static const String checkAUTH = 'haveIntroAuth';
+  static const String token = 'token';
+  
   static const String someThingWrongPlsTryAgain = 'someThingWrongPlsTryAgain';
   static const String tittleExitApp = 'tittleExitApp';
   static const String home = 'home';

@@ -4,8 +4,8 @@ import 'package:flutter_getx_base/shared/constants/image_constant.dart';
 import 'package:flutter_getx_base/shared/constants/my_textfield.dart';
 import 'package:flutter_getx_base/shared/utils/regex.dart';
 import 'package:flutter_getx_base/shared/utils/size_utils.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../shared/constants/app_style.dart';
 import '../../shared/constants/common.dart';
@@ -38,16 +38,16 @@ class LoginScreen extends StatelessWidget {
                     const SizedBox(
                       height: 12,
                     ),
-                    SvgPicture.asset(
-                      ImageConstant.iconApple,
-                      fit: BoxFit.cover,
-                      width: getSize(84),
+                    Lottie.asset(
+                      'assets/icons/y3dkIWcyIE.json',
+                      height: getSize(200),
+                      fit: BoxFit.contain,
                     ),
                     const SizedBox(
                       height: 48,
                     ),
                     Text(
-                      "Welcome to Travel App DreamTeam",
+                      "Welcome to Hostel App DreamTeam",
                       style: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 16,
@@ -189,10 +189,8 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-
-                    // not a member? register
                     const SizedBox(
-                      height: 10,
+                      height: 16,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -216,7 +214,7 @@ class LoginScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                        )
+                        ),
                       ],
                     )
                   ],

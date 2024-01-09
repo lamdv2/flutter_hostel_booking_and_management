@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_getx_base/routes/app_pages.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -40,9 +41,10 @@ class AuthService {
         final existingUser =
             await FirebaseAuth.instance.fetchSignInMethodsForEmail(user.email!);
 
-        if (existingUser.isNotEmpty) {
+        if (existingUser.isEmpty) {
           if (!await profileController.isCheckExist(user.email ?? '')) {
             final UserModel userModel = UserModel(
+              id: user.uid,
               email: user.email ?? "",
               passWord: "",
               phoneNub: "",
@@ -53,12 +55,14 @@ class AuthService {
         }
       }
 
-      await homeController.getUserDetails(userController.userEmail.value);
+      await homeController.getUserDetails(user?.email ?? '');
       final fcmTokenGet = LocalStorageHelper.getValue('fcmToken') ?? "";
       profileController.createPushNotification(
         homeController.userModel.value?.id ?? "",
         fcmTokenGet,
       );
+
+      Get.toNamed(Routes.HOME);
 
       return user;
     } catch (error) {

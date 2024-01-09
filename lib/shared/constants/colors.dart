@@ -62,6 +62,11 @@ class ColorConstants {
   static const Color accent1 = Color(0xFF616161);
   static const Color accent2 = Color(0xFF757575);
   static const Color grayTextField = Color(0xFFf2f5fc);
+  static const Color btnGradient = Color(0xFF43B1C4);
+  static const Color nextColor = Color(0xFF1563EF);
+  static const Color dividerColor = Color(0xFFE5E7EB);
+  static const Color text1Color = Color(0xFF323B4B);
+  static const Color btnCanCel = Color(0xFFD9D9D9);
 
   // Light theme
   // Status bar
@@ -92,4 +97,41 @@ Color hexToColor(String hex) {
     int.parse(hex.substring(1), radix: 16) +
         (hex.length == 7 ? 0xff000000 : 0x00000000),
   );
+}
+
+class Gradients {
+  static const Gradient defaultGradientBackground = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      ColorConstants.btnGradient,
+      ColorConstants.nextColor,
+    ],
+  );
+
+  static const Gradient defaultGradientButtonCancel = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomLeft,
+    colors: [
+      ColorConstants.dividerColor,
+      ColorConstants.btnCanCel,
+    ],
+  );
+
+  static const Gradient defaultGradientButton = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomLeft,
+    colors: [
+      Gradients.lightBlue1,
+      Gradients.lightBlue2,
+    ],
+  );
+
+  static const lightBlue1 = Color(0xFF449EFF);
+  static const lightBlue2 = Color(0xFF1DC7F7);
+  static const darkGreyNon = Color(0x22264444);
+  static const darkGreyMid = Color(0x3C2B3050);
+  static const darkGrey = Color(0xFF222644);
+  static const promo1 = Color(0xFF3E60F9);
+  static const promo2 = Color(0xFF3A52FF);
 }

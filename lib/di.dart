@@ -1,7 +1,6 @@
+import 'package:flutter_getx_base/services/storage_service.dart';
 import 'package:flutter_getx_base/shared/utils/app_flavor_helper.dart';
 import 'package:get/get.dart';
-
-import 'shared/services/services.dart';
 
 class DenpendencyInjection {
   static Future<void> init() async {
