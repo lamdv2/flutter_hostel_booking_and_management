@@ -1,14 +1,11 @@
+import 'package:flutter_getx_base/modules/auth/auth_controller.dart';
+import 'package:flutter_getx_base/modules/auth/user_controller.dart';
 import 'package:get/get.dart';
-
-import 'auth_controller.dart';
 
 class AuthBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<AuthController>(
-      () => AuthController(
-        apiRepository: Get.find(),
-      ),
-    );
+    Get.put<AuthController>(AuthController());
+    Get.put<UserController>(UserController());
   }
 }

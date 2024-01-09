@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_base/models/user/user_model.dart';
 import 'package:flutter_getx_base/modules/main/components/tabIcon_data.dart';
 import 'package:flutter_getx_base/modules/main/tabs/tabs.dart';
 import 'package:flutter_getx_base/shared/constants/common.dart';
@@ -25,6 +27,9 @@ class HomeController extends GetxController
   int tabIndex = 0;
   List<TabIconData> tabIconsList = TabIconData.tabIconsList;
   RxInt bottomNavIndex = 0.obs;
+
+  final _db = FirebaseFirestore.instance;
+  final userModel = Rxn<UserModel>();
 
   late TabController tabController;
   final prefs = Get.find<SharedPreferences>();
@@ -51,6 +56,18 @@ class HomeController extends GetxController
     tabController.addListener(() {
       tabIndex = tabController.index;
     });
+  }
+
+  Future<void> getUserDetails(String email) async {
+    final snapShot = await _db
+        .collection('userModel')
+        .where('email', isEqualTo: email)
+        .get();
+
+    if (snapShot.docs.isNotEmpty) {
+      userModel.value =
+          snapShot.docs.map((e) => UserModel.fromSnapshot(e)).single;
+    }
   }
 
   var _selectedLanguage = Language(1, "🇺🇸", "English", "en").obs;

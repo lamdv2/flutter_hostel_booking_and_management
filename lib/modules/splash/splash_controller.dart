@@ -4,7 +4,5 @@ class SplashController extends GetxController {
   @override
   void onReady() async {
     super.onReady();
-
-    //
   }
 }

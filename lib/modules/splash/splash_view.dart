@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_getx_base/routes/app_pages.dart';
 import 'package:flutter_getx_base/shared/constants/colors.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../shared/constants/storage.dart';
@@ -20,7 +21,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 2),
+      const Duration(seconds: 4),
       () async {
         final prefs = await SharedPreferences.getInstance();
         final accessToken = await prefs.getString(StorageConstants.token);
@@ -37,7 +38,7 @@ class _SplashViewState extends State<SplashView> {
         child: Container(
           height: double.infinity,
           width: double.infinity,
-          child: FlutterLogo(),
+          child: Lottie.asset('assets/icons/Animation_1704618473186.json'),
         ),
       ),
     );

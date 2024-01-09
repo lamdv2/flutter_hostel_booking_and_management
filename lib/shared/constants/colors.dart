@@ -59,6 +59,10 @@ class ColorConstants {
 
   static const Color borderGray = Color(0xFFE7E7E7);
 
+  static const Color accent1 = Color(0xFF616161);
+  static const Color accent2 = Color(0xFF757575);
+  static const Color grayTextField = Color(0xFFf2f5fc);
+
   // Light theme
   // Status bar
   static const Color lightStatusBar = Color(0xFFE0E0E0);

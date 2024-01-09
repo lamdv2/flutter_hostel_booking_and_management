@@ -18,6 +18,34 @@ class Regex {
     caseSensitive: false,
   );
 
+  static bool isStrongPassword(String password) {
+    if (password.length < 6) {
+      return false;
+    }
+    if (!password.contains(RegExp(r'[A-Z]'))) {
+      return false;
+    }
+    if (!password.contains(RegExp(r'[0-9]'))) {
+      return false;
+    }
+    if (!password.contains(RegExp(r'[@#$%^&+=]'))) {
+      return false;
+    }
+    return true;
+  }
+
+  static bool isPasswordUpcase(String password) {
+    return password.contains(RegExp(r'[A-Z]'));
+  }
+
+  static bool isPasswordNumber(String password) {
+    return password.contains(RegExp(r'[0-9]'));
+  }
+
+  static bool isPasswordSpecialChar(String password) {
+    return password.contains(RegExp(r'[!@#$%^&+=]'));
+  }
+
   static bool isPasswordAtLeast6Characters(String password) {
     return password.length >= 6;
   }
