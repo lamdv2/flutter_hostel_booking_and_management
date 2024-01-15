@@ -80,9 +80,7 @@ class ProfileWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    userController.userName.value != ''
-                        ? userController.userName.value
-                        : "",
+                    homeController.userModel.value?.firstName ?? "",
                     style: TextStyle(
                         color: appController.isDarkModeOn.value
                             ? ColorConstants.white
@@ -94,9 +92,7 @@ class ProfileWidget extends StatelessWidget {
                     height: 16,
                   ),
                   Text(
-                    userController.userEmail.value != ''
-                        ? userController.userEmail.value
-                        : '',
+                    homeController.userModel.value?.email ?? "",
                     style: TextStyle(
                       color: appController.isDarkModeOn.value
                           ? ColorConstants.white

@@ -47,6 +47,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      resizeToAvoidBottomInset: true,
       backgroundColor: appController.isDarkModeOn.value
           ? ColorConstants.darkBackground
           : ColorConstants.lightBackground,

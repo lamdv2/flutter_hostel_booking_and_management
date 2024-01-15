@@ -17,44 +17,44 @@ class FullImageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: CustomAppBar(
-          backgroundColor: appController.isDarkModeOn.value
-              ? ColorConstants.gray
-              : ColorConstants.white,
-        ),
-        body: profileController.imageFonts.value.isNotEmpty
-            ? Center(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10, bottom: 10),
-                  child: Container(
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetEntityImageProvider(
-                          profileController.imageFonts.value[0],
-                        ),
+    return Scaffold(
+      extendBody: true,
+      resizeToAvoidBottomInset: false,
+      appBar: CustomAppBar(
+        backgroundColor: appController.isDarkModeOn.value
+            ? ColorConstants.darkAppBar
+            : ColorConstants.primaryColor,
+      ),
+      body: profileController.imageFonts.value.isNotEmpty
+          ? Center(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                child: Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetEntityImageProvider(
+                        profileController.imageFonts.value[0],
                       ),
                     ),
                   ),
                 ),
-              )
-            : imageUrl == ""
-                ? Center(
-                    child: Image.asset(ImageConstant.imgUserProfileNon),
-                  )
-                : Center(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: CachedNetworkImage(
-                        imageUrl: imageUrl,
-                      ),
+              ),
+            )
+          : imageUrl == ""
+              ? Center(
+                  child: Image.asset(ImageConstant.imgUserProfileNon),
+                )
+              : Center(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: CachedNetworkImage(
+                      imageUrl: imageUrl,
                     ),
                   ),
-      ),
+                ),
     );
   }
 }

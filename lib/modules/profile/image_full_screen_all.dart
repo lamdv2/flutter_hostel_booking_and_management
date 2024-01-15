@@ -19,28 +19,28 @@ class FullImageScreenAll extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: CustomAppBar(
-          backgroundColor: appController.isDarkModeOn.value
-              ? ColorConstants.gray
-              : ColorConstants.white,
-        ),
-        body: !isCheckNetwork
-            ? Center(
-                child: Image.asset(imageUrl),
-              )
-            : Center(
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: CachedNetworkImage(
-                    imageUrl: imageUrl,
-                  ),
+    return Scaffold(
+      extendBody: true,
+      resizeToAvoidBottomInset: true,
+      appBar: CustomAppBar(
+        backgroundColor: appController.isDarkModeOn.value
+            ? ColorConstants.darkAppBar
+            : ColorConstants.primaryColor,
+      ),
+      body: !isCheckNetwork
+          ? Center(
+              child: Image.asset(imageUrl),
+            )
+          : Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: CachedNetworkImage(
+                  imageUrl: imageUrl,
                 ),
               ),
-      ),
+            ),
     );
   }
 }

@@ -1,7 +1,6 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_base/app_controller.dart';
 import 'package:flutter_getx_base/models/hostel/hostel_model.dart';
@@ -21,6 +20,9 @@ class HomeTabScreen extends GetView<HomeTabController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: appController.isDarkModeOn.value
+              ? ColorConstants.darkBackground
+              : ColorConstants.lightBackground,
         extendBody: true,
         resizeToAvoidBottomInset: false,
         body: Padding(

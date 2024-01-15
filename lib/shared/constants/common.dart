@@ -76,6 +76,17 @@ class CommonConstants {
   static String newPassword = 'newPassword';
   static String confirmNewPassword = 'confirmNewPassword';
   static String popular = 'popular';
+  static String appSetting = 'appSetting';
+  static String personalInformation = 'personalInformation';
+  static String notificationAndChat = 'notificationAndChat';
+  static String privateAndPermissions = 'privateAndPermissions';
+  static String passwordAndAccount = 'passwordAndAccount';
+  static String changeLanguage = 'changeLanguage';
+  static String darkMode = 'darkMode';
+  static String guide = 'guide';
+  static String feedback = 'feedback';
+  static String about = 'about';
+  static String qrCode = 'qrCode';
 
   static const double largeText = 40.0;
   static const double normalText = 22.0;

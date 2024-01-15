@@ -11,5 +11,8 @@ abstract class Routes {
   static const HOME = '/home';
   static const HOME_TAB = '/home_tab';
   static const CATEGORY = '/category';
+  static const PROFILE = '/profile';
   static const EDIT_PROFILE = '/edit_profile';
+  static const CATEGORIES = '/categories';
+  static const FAVOURITE = '/favourite';
 }

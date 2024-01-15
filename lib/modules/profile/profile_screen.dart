@@ -34,11 +34,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       drawer: DrawerWidget(),
       appBar: CustomAppBar(
         onTap: () {
-          if (homeController.bottomNavIndex.value != 0) {
-            homeController.bottomNavIndex.value = 0;
-            return false;
-          }
-          return true;
+          Get.back();
         },
         backgroundColor: appController.isDarkModeOn.value
             ? ColorConstants.darkAppBar

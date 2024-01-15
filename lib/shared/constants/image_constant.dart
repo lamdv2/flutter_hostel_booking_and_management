@@ -37,6 +37,8 @@ class ImageConstant {
   static const String icoLogout = 'assets/icons/ic_logout.png';
 
   // Icon SVG
+  static const String icoNextRight = 'assets/icons/svg/ic_next_right.svg';
+
   static const String icActivity = 'assets/icons/svg/ic_activity.svg';
   static const String icAddUser = 'assets/icons/svg/ic_add_user.svg';
   static const String icArrowDownCircle =

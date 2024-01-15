@@ -1,15 +1,16 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_base/app_controller.dart';
-import 'package:flutter_getx_base/modules/home/home_tab_screen.dart';
-import 'package:flutter_getx_base/shared/constants/common.dart';
-import 'package:flutter_getx_base/shared/widgets/custom_bottom_navigation_bar.dart';
-import 'package:flutter_getx_base/shared/widgets/drawer_widget.dart';
 import 'package:get/get.dart';
 
+import '../../app_controller.dart';
 import '../../shared/constants/colors.dart';
-import '../profile/profile_screen.dart';
+import '../../shared/constants/common.dart';
+import '../../shared/widgets/custom_bottom_navigation_bar.dart';
+import '../../shared/widgets/drawer_widget.dart';
+import '../categogy/category_screen.dart';
+import '../home/home_tab_screen.dart';
+import '../setting/setting_screen.dart';
 import 'home_controller.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -88,9 +89,9 @@ class HomeScreen extends GetView<HomeController> {
   List<Widget> _widgetOptions() {
     return [
       HomeTabScreen(),
-      Center(child: Text("Screen 2")),
-      Center(child: Text("Screen 3")),
-      ProfileScreen(),
+      CategoryScreen(),
+      CategoryScreen(),
+      SettingScreen(),
     ];
   }
 }

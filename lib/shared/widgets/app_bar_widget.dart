@@ -4,6 +4,7 @@ import 'package:flutter_getx_base/shared/constants/colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
+import '../../app_controller.dart';
 import '../utils/size_utils.dart';
 
 // ignore: must_be_immutable
@@ -33,10 +34,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   Function()? onTap;
 
+  final AppController appController = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: backgroundColor ?? ColorConstants.lightBackground,
+      backgroundColor: appController.isDarkModeOn.value
+          ? ColorConstants.darkAppBar
+          : ColorConstants.primaryColor,
       leading: leading ??
           Padding(
             padding: const EdgeInsets.only(

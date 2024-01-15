@@ -2,11 +2,13 @@ import 'package:flutter_getx_base/modules/auth/auth_binding.dart';
 import 'package:flutter_getx_base/modules/auth/auth_login_screen.dart';
 import 'package:flutter_getx_base/modules/auth/auth_register_screen.dart';
 import 'package:flutter_getx_base/modules/auth/auth_screen.dart';
+import 'package:flutter_getx_base/modules/categogy/category.dart';
 import 'package:flutter_getx_base/modules/home/home_tab_binding.dart';
 import 'package:flutter_getx_base/modules/home/home_tab_screen.dart';
 import 'package:flutter_getx_base/modules/intro/intro_screen.dart';
 import 'package:flutter_getx_base/modules/main/home_binding.dart';
 import 'package:flutter_getx_base/modules/main/home_screen.dart';
+import 'package:flutter_getx_base/modules/profile/profile_screen.dart';
 import 'package:flutter_getx_base/modules/splash/splash_binding.dart';
 import 'package:flutter_getx_base/modules/splash/splash_view.dart';
 import 'package:get/get.dart';
@@ -35,6 +37,11 @@ class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
+      name: Routes.PROFILE,
+      page: () => const ProfileScreen(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
       name: Routes.EDIT_PROFILE,
       page: () => const EditProfileScreen(),
       binding: ProfileBinding(),
@@ -58,6 +65,11 @@ class AppPages {
       name: Routes.HOME_TAB,
       page: () => HomeTabScreen(),
       binding: HomeTabBinding(),
+    ),
+    GetPage(
+      name: Routes.CATEGORIES,
+      page: () => CategoryScreen(),
+      binding: CategoryBinding(),
     ),
   ];
 }
