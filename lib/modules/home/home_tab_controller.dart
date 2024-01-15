@@ -12,6 +12,20 @@ class HomeTabController extends GetxController
         isActive: true,
         idUSer: "idUSer",
       ),
+      HostelModel(
+        nameHostel: "nameHostel",
+        address: "address",
+        phoneNub: "phoneNub",
+        isActive: true,
+        idUSer: "idUSer",
+      ),
+      HostelModel(
+        nameHostel: "nameHostel",
+        address: "address",
+        phoneNub: "phoneNub",
+        isActive: true,
+        idUSer: "idUSer",
+      ),
     ],
   );
 }
