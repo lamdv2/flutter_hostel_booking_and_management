@@ -75,6 +75,7 @@ class CommonConstants {
   static String oldPassword = 'oldPassword';
   static String newPassword = 'newPassword';
   static String confirmNewPassword = 'confirmNewPassword';
+  static String popular = 'popular';
 
   static const double largeText = 40.0;
   static const double normalText = 22.0;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_base/app_controller.dart';
-import 'package:flutter_getx_base/modules/home/home_screen.dart';
+import 'package:flutter_getx_base/modules/home/home_tab_screen.dart';
 import 'package:flutter_getx_base/shared/constants/common.dart';
 import 'package:flutter_getx_base/shared/widgets/custom_bottom_navigation_bar.dart';
 import 'package:get/get.dart';

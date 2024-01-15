@@ -2,6 +2,8 @@ import 'package:flutter_getx_base/modules/auth/auth_binding.dart';
 import 'package:flutter_getx_base/modules/auth/auth_login_screen.dart';
 import 'package:flutter_getx_base/modules/auth/auth_register_screen.dart';
 import 'package:flutter_getx_base/modules/auth/auth_screen.dart';
+import 'package:flutter_getx_base/modules/home/home_tab_binding.dart';
+import 'package:flutter_getx_base/modules/home/home_tab_screen.dart';
 import 'package:flutter_getx_base/modules/intro/intro_screen.dart';
 import 'package:flutter_getx_base/modules/main/home_binding.dart';
 import 'package:flutter_getx_base/modules/main/home_screen.dart';
@@ -51,6 +53,11 @@ class AppPages {
           page: () => LoginScreen(),
         ),
       ],
+    ),
+    GetPage(
+      name: Routes.HOME_TAB,
+      page: () => HomeTabScreen(),
+      binding: HomeTabBinding(),
     ),
   ];
 }

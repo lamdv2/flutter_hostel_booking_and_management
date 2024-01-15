@@ -1,5 +1,6 @@
 import 'package:flutter_getx_base/modules/auth/auth.dart';
 import 'package:flutter_getx_base/modules/auth/user_controller.dart';
+import 'package:flutter_getx_base/modules/home/home_tab_controller.dart';
 import 'package:flutter_getx_base/modules/main/home_controller.dart';
 import 'package:flutter_getx_base/modules/profile/profile_controller.dart';
 import 'package:get/get.dart';
@@ -33,6 +34,10 @@ class AppBinding extends Bindings {
       )
       ..put(
         AuthController(),
+        permanent: true,
+      )
+      ..put(
+        HomeTabController(),
         permanent: true,
       );
   }

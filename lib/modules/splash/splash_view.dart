@@ -1,13 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_base/routes/app_pages.dart';
 import 'package:flutter_getx_base/shared/constants/colors.dart';
-import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import '../../shared/constants/storage.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -20,14 +13,6 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-    // Timer(
-    //   const Duration(seconds: 4),
-    //   () async {
-    //     final prefs = await SharedPreferences.getInstance();
-    //     final accessToken = await prefs.getString(StorageConstants.token);
-    //     Get.offAllNamed(accessToken != null ? Routes.HOME : Routes.LOG_IN);
-    //   },
-    // );
   }
 
   @override
