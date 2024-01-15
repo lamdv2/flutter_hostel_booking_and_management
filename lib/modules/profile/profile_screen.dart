@@ -33,10 +33,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       drawer: DrawerWidget(),
       appBar: CustomAppBar(
+        onTap: () {
+          if (homeController.bottomNavIndex.value != 0) {
+            homeController.bottomNavIndex.value = 0;
+            return false;
+          }
+          return true;
+        },
         backgroundColor: appController.isDarkModeOn.value
             ? ColorConstants.darkAppBar
             : ColorConstants.primaryColor,
-        iconBgrColor: ColorConstants.grayTextField,
       ),
       body: Obx(
         () => Scaffold(

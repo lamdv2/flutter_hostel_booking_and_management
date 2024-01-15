@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_base/app_controller.dart';
 import 'package:flutter_getx_base/models/hostel/hostel_model.dart';
+import 'package:flutter_getx_base/modules/profile/image_full_screen.dart';
 import 'package:flutter_getx_base/shared/constants/app_style.dart';
 import 'package:flutter_getx_base/shared/constants/image_constant.dart';
 import 'package:flutter_getx_base/shared/utils/size_utils.dart';
@@ -80,12 +81,20 @@ class HomeTabScreen extends GetView<HomeTabController> {
                     mainAxisSpacing: getSize(16),
                   ),
                   itemBuilder: (context, index) {
-                    return ClipRRect(
-                      borderRadius: BorderRadius.circular(getSize(8)),
-                      child: CachedNetworkImage(
-                        imageUrl:
-                            "https://firebasestorage.googleapis.com/v0/b/booking-travel-flutter.appspot.com/o/citys%2Fcau_rong_dn.png?alt=media&token=2de44eca-f216-4ea4-a5f6-d23498c36ff6",
-                        fit: BoxFit.cover,
+                    return GestureDetector(
+                      onTap: () => Get.to(
+                        FullImageScreen(
+                          imageUrl:
+                              "https://firebasestorage.googleapis.com/v0/b/booking-travel-flutter.appspot.com/o/citys%2Fcau_rong_dn.png?alt=media&token=2de44eca-f216-4ea4-a5f6-d23498c36ff6",
+                        ),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(getSize(8)),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              "https://firebasestorage.googleapis.com/v0/b/booking-travel-flutter.appspot.com/o/citys%2Fcau_rong_dn.png?alt=media&token=2de44eca-f216-4ea4-a5f6-d23498c36ff6",
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     );
                   },

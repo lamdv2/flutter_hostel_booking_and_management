@@ -1,11 +1,15 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_base/app_controller.dart';
 import 'package:flutter_getx_base/modules/home/home_tab_screen.dart';
 import 'package:flutter_getx_base/shared/constants/common.dart';
 import 'package:flutter_getx_base/shared/widgets/custom_bottom_navigation_bar.dart';
+import 'package:flutter_getx_base/shared/widgets/drawer_widget.dart';
 import 'package:get/get.dart';
 
 import '../../shared/constants/colors.dart';
+import '../profile/profile_screen.dart';
 import 'home_controller.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -23,6 +27,7 @@ class HomeScreen extends GetView<HomeController> {
       },
       child: Obx(
         () => Scaffold(
+          drawer: DrawerWidget(),
           extendBody: true,
           resizeToAvoidBottomInset: false,
           body: IndexedStack(
@@ -47,7 +52,7 @@ class HomeScreen extends GetView<HomeController> {
             : ColorConstants.white,
         selectedColor: appController.isDarkModeOn.value
             ? ColorConstants.colorDarkModeBlue
-            : ColorConstants.kPrimaryColor,
+            : ColorConstants.primaryColor,
         notchedShape: const CircularNotchedRectangle(),
         onTabSelected: (value) => controller.setValueBottomIndex(value),
         items: [
@@ -85,7 +90,7 @@ class HomeScreen extends GetView<HomeController> {
       HomeTabScreen(),
       Center(child: Text("Screen 2")),
       Center(child: Text("Screen 3")),
-      Center(child: Text("Screen 4")),
+      ProfileScreen(),
     ];
   }
 }

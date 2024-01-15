@@ -57,7 +57,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: Container(
                   padding: EdgeInsets.all(getSize(8)),
                   decoration: BoxDecoration(
-                    border: Border.all(color: ColorConstants.borderGray),
+                    border: Border.all(
+                      color: ColorConstants.borderGray.withOpacity(.75),
+                    ),
                     borderRadius: const BorderRadius.all(
                       Radius.circular(68),
                     ),
@@ -65,7 +67,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   child: SvgPicture.asset(
                     "assets/icons/ic_next_left.svg",
                     colorFilter: ColorFilter.mode(
-                      iconBgrColor ?? ColorConstants.grey800!,
+                      iconBgrColor ?? ColorConstants.borderGray,
                       BlendMode.srcIn,
                     ),
                     fit: BoxFit.fitHeight,
@@ -78,7 +80,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         titles ?? '',
         overflow: TextOverflow.ellipsis,
         textAlign: TextAlign.center,
-        style: AppStyles.black000Size20Fw500FfMont,
+        style: AppStyles.white000Size20Fw500FfMont,
       ),
       centerTitle: true,
       elevation: 0,

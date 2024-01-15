@@ -55,7 +55,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         backgroundColor: appController.isDarkModeOn.value
             ? ColorConstants.darkAppBar
             : ColorConstants.primaryColor,
-        iconBgrColor: ColorConstants.gray400,
       ),
       body: Obx(
         () => SafeArea(
@@ -183,7 +182,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     ),
                     MyTextField(
                       controller: profileController.editEmailController,
-                      hintText: '',
+                      hintText: CommonConstants.email.tr,
                       obscureText: false,
                       isCheckReadOnly: true,
                     ),
