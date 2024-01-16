@@ -18,7 +18,8 @@ class ColorConstants {
   static Color purpleRewardColor = const Color(0XFF8989D6);
   static Color yellowRewardColor = const Color(0XFFFFAD0E);
   static Color lightBlueRewardColor = const Color(0XFF5C9CE4);
-  static var primaryColor = const Color(0xff296e48);
+  // static var primaryColor = const Color(0xff296e48);
+  static var primaryColor = const Color(0xff1B9C85);
   static var blackColor = Colors.black54;
   static Color backgroundColor = const Color(0xFFF5F5F5);
   static Color backgroundColorButtonBlue = const Color(0xFF0256D9);

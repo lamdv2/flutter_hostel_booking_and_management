@@ -66,7 +66,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       color: ColorConstants.borderGray.withOpacity(.75),
                     ),
                     borderRadius: const BorderRadius.all(
-                      Radius.circular(68),
+                      Radius.circular(200),
                     ),
                   ),
                   child: SvgPicture.asset(
@@ -94,6 +94,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize {
-    return Size.fromHeight(height ?? getVerticalSize(getSize(70)));
+    return Size.fromHeight(height ?? getVerticalSize(getSize(100.0)));
   }
 }

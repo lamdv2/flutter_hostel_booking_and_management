@@ -21,10 +21,10 @@ class HomeTabScreen extends GetView<HomeTabController> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: appController.isDarkModeOn.value
-              ? ColorConstants.darkBackground
-              : ColorConstants.lightBackground,
+            ? ColorConstants.darkBackground
+            : ColorConstants.lightBackground,
         extendBody: true,
-        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: true,
         body: Padding(
           padding: EdgeInsets.all(getSize(20)),
           child: SingleChildScrollView(
