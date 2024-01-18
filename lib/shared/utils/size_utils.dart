@@ -64,6 +64,8 @@ EdgeInsets getPadding({
   double? top,
   double? right,
   double? bottom,
+  double? vertical,
+  double? horizontal,
 }) {
   return getMarginOrPadding(
     all: all,
@@ -71,6 +73,8 @@ EdgeInsets getPadding({
     top: top,
     right: right,
     bottom: bottom,
+    vertical: vertical,
+    horizontal: horizontal,
   );
 }
 
@@ -80,6 +84,8 @@ EdgeInsets getMargin({
   double? top,
   double? right,
   double? bottom,
+  double? vertical,
+  double? horizontal,
 }) {
   return getMarginOrPadding(
     all: all,
@@ -87,6 +93,8 @@ EdgeInsets getMargin({
     top: top,
     right: right,
     bottom: bottom,
+    vertical: vertical,
+    horizontal: horizontal,
   );
 }
 
@@ -96,12 +104,22 @@ EdgeInsets getMarginOrPadding({
   double? top,
   double? right,
   double? bottom,
+  double? vertical,
+  double? horizontal,
 }) {
   if (all != null) {
     left = all;
     top = all;
     right = all;
     bottom = all;
+  }
+  if (vertical != null) {
+    top = vertical;
+    bottom = vertical;
+  }
+  if (horizontal != null) {
+    left = horizontal;
+    right = horizontal;
   }
   return EdgeInsets.only(
     left: getHorizontalSize(left ?? 0),

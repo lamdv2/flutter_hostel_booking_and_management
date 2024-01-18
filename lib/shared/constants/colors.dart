@@ -63,8 +63,8 @@ class ColorConstants {
   static const Color accent1 = Color(0xFF616161);
   static const Color accent2 = Color(0xFF757575);
   static const Color grayTextField = Color(0xFFf2f5fc);
-  static const Color btnGradient = Color(0xFF43B1C4);
-  static const Color nextColor = Color(0xFF1563EF);
+  static const Color btnGradient = Color(0xFF1B9C85 );
+  static const Color nextColor = Color(0xFF86CEC1 );
   static const Color dividerColor = Color(0xFFE5E7EB);
   static const Color text1Color = Color(0xFF323B4B);
   static const Color btnCanCel = Color(0xFFD9D9D9);
