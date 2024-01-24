@@ -198,8 +198,8 @@ class RegisterScreen extends StatelessWidget {
                                       onPressed: Get.back,
                                       child: Text(
                                         CommonConstants.ok.tr,
-                                        style:
-                                            AppStyles.blue000Size14Fw600FfMont,
+                                        style: AppStyles
+                                            .blue000Size14Fw600FfNunito,
                                       ),
                                     ),
                                   ],

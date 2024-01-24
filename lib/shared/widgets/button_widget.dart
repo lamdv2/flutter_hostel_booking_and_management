@@ -33,7 +33,7 @@ class ButtonWidget extends StatelessWidget {
         child: Text(
           textBtn,
           style: color == null
-              ? AppStyles.white000Size18Fw500FfMont
+              ? AppStyles.white000Size18Fw500FfNunito
               : TextStyle(
                   fontSize: 18,
                   color: ColorConstants.primaryColor,

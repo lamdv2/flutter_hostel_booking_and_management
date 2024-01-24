@@ -50,7 +50,7 @@ class _MyTextFieldState extends State<MyTextField> {
       controller: widget.controller,
       focusNode: _focusNode,
       obscureText: widget.obscureText,
-      // style: AppStyles.black000Size14Fw400FfMont,
+      // style: AppStyles.black000Size14Fw400FfNunito,
       keyboardType: widget.isTypeNumb != null && widget.isTypeNumb == true
           ? TextInputType.number
           : TextInputType.text,

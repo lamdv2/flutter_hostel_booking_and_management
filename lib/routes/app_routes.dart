@@ -15,4 +15,5 @@ abstract class Routes {
   static const EDIT_PROFILE = '/edit_profile';
   static const CATEGORIES = '/categories';
   static const FAVOURITE = '/favourite';
+  static const CHANGE_PASSWORD_SCREEN = '/change_password_screen';
 }

@@ -85,7 +85,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         titles ?? '',
         overflow: TextOverflow.ellipsis,
         textAlign: TextAlign.center,
-        style: AppStyles.white000Size20Fw500FfMont,
+        style: AppStyles.white000Size20Fw500FfNunito,
       ),
       centerTitle: true,
       elevation: 0,
@@ -94,6 +94,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize {
-    return Size.fromHeight(height ?? getVerticalSize(getSize(100.0)));
+    return Size.fromHeight(height ?? getVerticalSize(getSize(96)));
   }
 }

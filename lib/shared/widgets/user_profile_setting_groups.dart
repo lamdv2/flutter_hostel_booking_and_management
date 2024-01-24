@@ -42,8 +42,8 @@ class BuildSettingsGroup extends StatelessWidget {
                     settingsGroupTitle!,
                     style: (settingsGroupTitleStyle == null)
                         ? appController.isDarkModeOn.value
-                            ? AppStyles.white000Size16Fw500FfMont
-                            : AppStyles.gray800Size16Fw500FfMont
+                            ? AppStyles.white000Size16Fw500FfNunito
+                            : AppStyles.gray800Size16Fw500FfNunito
                         : settingsGroupTitleStyle,
                   ),
                 )
@@ -73,7 +73,7 @@ class BuildSettingsGroup extends StatelessWidget {
                       child: Text(
                         settingsGroupContentTitle!,
                         style: (settingsGroupContentTitleStyle == null)
-                            ? AppStyles.black000Size14Fw500FfMont
+                            ? AppStyles.black000Size14Fw500FfNunito
                             : settingsGroupContentTitleStyle,
                       ),
                     ),

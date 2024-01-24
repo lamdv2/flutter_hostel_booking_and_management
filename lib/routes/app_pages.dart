@@ -8,6 +8,8 @@ import 'package:flutter_getx_base/modules/home/home_tab_screen.dart';
 import 'package:flutter_getx_base/modules/intro/intro_screen.dart';
 import 'package:flutter_getx_base/modules/main/home_binding.dart';
 import 'package:flutter_getx_base/modules/main/home_screen.dart';
+import 'package:flutter_getx_base/modules/profile/change_password/change_password_binding.dart';
+import 'package:flutter_getx_base/modules/profile/change_password/change_password_screen.dart';
 import 'package:flutter_getx_base/modules/profile/profile_screen.dart';
 import 'package:flutter_getx_base/modules/splash/splash_binding.dart';
 import 'package:flutter_getx_base/modules/splash/splash_view.dart';
@@ -70,6 +72,11 @@ class AppPages {
       name: Routes.CATEGORIES,
       page: () => CategoryScreen(),
       binding: CategoryBinding(),
+    ),
+    GetPage(
+      name: Routes.CHANGE_PASSWORD_SCREEN,
+      page: () => ChangePasswordScreen(),
+      binding: ChangePasswordBinding(),
     ),
   ];
 }

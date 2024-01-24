@@ -8,6 +8,7 @@ environment:
   sdk: ">=3.0.2 <4.0.0"
 
 dependencies:
+  anim_search_bar: ^2.0.3
   awesome_dialog: ^3.1.0
   cached_network_image: ^3.2.3
   cloud_firestore: ^4.14.0
@@ -26,12 +27,15 @@ dependencies:
   flutter_speed_dial: ^7.0.0
   flutter_svg: ^2.0.0
   fluttertoast: ^8.0.9
+  font_awesome_flutter: ^10.6.0
   freezed: ^2.3.2
   freezed_annotation: 2.2.0
   get: ^4.6.5
+  google_fonts: ^6.1.0
   google_sign_in: ^6.2.1
   intl: ^0.18.1
   intl_phone_field: ^3.2.0
+  like_button: ^2.0.5
   loading_animation_widget: ^1.2.0+4
   lottie: ^2.7.0
   permission_handler: ^10.4.3
@@ -56,13 +60,37 @@ flutter:
     - assets/images/
     - assets/icons/svg/
   fonts:
-    - family: Inter
+    - family: Nunito
       fonts:
-        - asset: assets/fonts/InterSemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/InterMedium.ttf
-          weight: 500
-        - asset: assets/fonts/InterRegular.ttf
-          weight: 400
-        - asset: assets/fonts/InterBold.ttf
+        - asset: assets\fonts\nunito\Nunito-Black.ttf
+          weight: 900
+        - asset: assets\fonts\nunito\Nunito-BlackItalic.ttf
+          weight: 900
+        - asset: assets\fonts\nunito\Nunito-Bold.ttf
           weight: 700
+        - asset: assets\fonts\nunito\Nunito-BoldItalic.ttf
+          weight: 700
+        - asset: assets\fonts\nunito\Nunito-ExtraBold.ttf
+          weight: 800
+        - asset: assets\fonts\nunito\Nunito-ExtraBoldItalic.ttf
+          weight: 800
+        - asset: assets\fonts\nunito\Nunito-ExtraLight.ttf
+          weight: 200
+        - asset: assets\fonts\nunito\Nunito-ExtraLightItalic.ttf
+          weight: 200
+        - asset: assets\fonts\nunito\Nunito-Italic.ttf
+          weight: 400
+        - asset: assets\fonts\nunito\Nunito-Light.ttf
+          weight: 300
+        - asset: assets\fonts\nunito\Nunito-LightItalic.ttf
+          weight: 300
+        - asset: assets\fonts\nunito\Nunito-Medium.ttf
+          weight: 500
+        - asset: assets\fonts\nunito\Nunito-MediumItalic.ttf
+          weight: 500
+        - asset: assets\fonts\nunito\Nunito-Regular.ttf
+          weight: 400
+        - asset: assets\fonts\nunito\Nunito-SemiBold.ttf
+          weight: 600
+        - asset: assets\fonts\nunito\Nunito-SemiBoldItalic.ttf
+          weight: 600

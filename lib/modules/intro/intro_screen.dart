@@ -5,7 +5,6 @@ import 'package:flutter_getx_base/shared/constants/app_style.dart';
 import 'package:flutter_getx_base/shared/constants/colors.dart';
 import 'package:flutter_getx_base/shared/constants/image_constant.dart';
 import 'package:flutter_getx_base/shared/utils/size_utils.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -56,14 +55,14 @@ class _IntroScreenState extends State<IntroScreen> {
             children: [
               Text(
                 title,
-                style: AppStyles.graySecondSize14Fw400FfMont,
+                style: AppStyles.graySecondSize14Fw400FfNunito,
               ),
               SizedBox(
                 height: getSize(24),
               ),
               Text(
                 description,
-                style: AppStyles.graySecondSize14Fw400FfMont,
+                style: AppStyles.graySecondSize14Fw400FfNunito,
               )
             ],
           ),

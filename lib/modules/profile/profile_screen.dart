@@ -73,7 +73,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     children: [
                       Text(
                         CommonConstants.personalDetail.tr,
-                        style: AppStyles.black000Size20Fw500FfMont.copyWith(
+                        style: AppStyles.black000Size20Fw500FfNunito.copyWith(
                             color: appController.isDarkModeOn.value
                                 ? ColorConstants.white
                                 : ColorConstants.black),
@@ -84,7 +84,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         },
                         child: Text(
                           CommonConstants.change.tr,
-                          style: AppStyles.black000Size16Fw400FfMont.copyWith(
+                          style: AppStyles.black000Size16Fw400FfNunito.copyWith(
                             color: appController.isDarkModeOn.value
                                 ? ColorConstants.gray400
                                 : ColorConstants.primaryColor,

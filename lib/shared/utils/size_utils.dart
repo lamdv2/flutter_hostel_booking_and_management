@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 
 MediaQueryData mediaQueryData = MediaQueryData.fromView(ui.window);
 
-const num FIGMA_DESIGN_WIDTH = 428;
-const num FIGMA_DESIGN_HEIGHT = 926;
+const num FIGMA_DESIGN_WIDTH = 375;
+const num FIGMA_DESIGN_HEIGHT = 812;
 const num FIGMA_DESIGN_STATUS_BAR = 0;
 
 double getScaleFactor() {

@@ -177,7 +177,7 @@ class LoginScreen extends StatelessWidget {
                                       child: Text(
                                         CommonConstants.ok.tr,
                                         style:
-                                            AppStyles.blue000Size14Fw600FfMont,
+                                            AppStyles.blue000Size14Fw600FfNunito,
                                       ),
                                     ),
                                   ],

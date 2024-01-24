@@ -78,8 +78,8 @@ class SettingScreen extends StatelessWidget {
                       widgetTitle: Text(
                         CommonConstants.personalInformation.tr,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.lightDarkModeSize16Fw500FfMont
-                            : AppStyles.gray600Size16Fw500FfMont,
+                            ? AppStyles.lightDarkModeSize16Fw500FfNunito
+                            : AppStyles.gray600Size16Fw500FfNunito,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -90,8 +90,8 @@ class SettingScreen extends StatelessWidget {
                       widgetTitle: Text(
                         CommonConstants.notificationAndChat.tr,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.lightDarkModeSize16Fw500FfMont
-                            : AppStyles.gray600Size16Fw500FfMont,
+                            ? AppStyles.lightDarkModeSize16Fw500FfNunito
+                            : AppStyles.gray600Size16Fw500FfNunito,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -102,20 +102,20 @@ class SettingScreen extends StatelessWidget {
                       widgetTitle: Text(
                         CommonConstants.privateAndPermissions.tr,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.lightDarkModeSize16Fw500FfMont
-                            : AppStyles.gray600Size16Fw500FfMont,
+                            ? AppStyles.lightDarkModeSize16Fw500FfNunito
+                            : AppStyles.gray600Size16Fw500FfNunito,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
                     BuildSettingsItem(
-                      // onTap: () => Get.toNamed(Routes.CHANGE_PASSWORD_SCREEN),
+                      onTap: () => Get.toNamed(Routes.CHANGE_PASSWORD_SCREEN),
                       imageAsset: ImageConstant.icLock,
                       widgetTitle: Text(
                         CommonConstants.passwordAndAccount.tr,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.lightDarkModeSize16Fw500FfMont
-                            : AppStyles.gray600Size16Fw500FfMont,
+                            ? AppStyles.lightDarkModeSize16Fw500FfNunito
+                            : AppStyles.gray600Size16Fw500FfNunito,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -130,8 +130,8 @@ class SettingScreen extends StatelessWidget {
                       widgetTitle: Text(
                         CommonConstants.changeLanguage.tr,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.lightDarkModeSize16Fw500FfMont
-                            : AppStyles.gray600Size16Fw500FfMont,
+                            ? AppStyles.lightDarkModeSize16Fw500FfNunito
+                            : AppStyles.gray600Size16Fw500FfNunito,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -161,8 +161,8 @@ class SettingScreen extends StatelessWidget {
                       widgetTitle: Text(
                         CommonConstants.darkMode.tr,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.lightDarkModeSize16Fw500FfMont
-                            : AppStyles.gray600Size16Fw500FfMont,
+                            ? AppStyles.lightDarkModeSize16Fw500FfNunito
+                            : AppStyles.gray600Size16Fw500FfNunito,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -189,8 +189,8 @@ class SettingScreen extends StatelessWidget {
                       widgetTitle: Text(
                         CommonConstants.guide.tr,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.lightDarkModeSize16Fw500FfMont
-                            : AppStyles.gray600Size16Fw500FfMont,
+                            ? AppStyles.lightDarkModeSize16Fw500FfNunito
+                            : AppStyles.gray600Size16Fw500FfNunito,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -201,8 +201,8 @@ class SettingScreen extends StatelessWidget {
                       widgetTitle: Text(
                         CommonConstants.feedback.tr,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.lightDarkModeSize16Fw500FfMont
-                            : AppStyles.gray600Size16Fw500FfMont,
+                            ? AppStyles.lightDarkModeSize16Fw500FfNunito
+                            : AppStyles.gray600Size16Fw500FfNunito,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -213,8 +213,8 @@ class SettingScreen extends StatelessWidget {
                       widgetTitle: Text(
                         CommonConstants.about.tr,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.lightDarkModeSize16Fw500FfMont
-                            : AppStyles.gray600Size16Fw500FfMont,
+                            ? AppStyles.lightDarkModeSize16Fw500FfNunito
+                            : AppStyles.gray600Size16Fw500FfNunito,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -232,8 +232,8 @@ class SettingScreen extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                         style: appController.isDarkModeOn.value
-                            ? AppStyles.white000Size16Fw500FfMont
-                            : AppStyles.black000Size16Fw500FfMont,
+                            ? AppStyles.white000Size16Fw500FfNunito
+                            : AppStyles.black000Size16Fw500FfNunito,
                       ),
                       SizedBox(
                         width: getSize(16),
