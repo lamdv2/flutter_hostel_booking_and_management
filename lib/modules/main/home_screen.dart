@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_base/modules/message/message.dart';
 import 'package:get/get.dart';
 
 import '../../app_controller.dart';
@@ -73,7 +74,7 @@ class HomeScreen extends GetView<HomeController> {
             iconData: controller.bottomNavIndex.value == 2
                 ? controller.bottomNavSelectedIconPaths[2]
                 : controller.imagePaths[2],
-            text: "Favourite".tr,
+            text: "Message".tr,
           ),
           BottomBarItem(
             iconData: controller.bottomNavIndex.value == 3
@@ -90,7 +91,7 @@ class HomeScreen extends GetView<HomeController> {
     return [
       HomeTabScreen(),
       CategoryScreen(),
-      CategoryScreen(),
+      MessageScreen(),
       SettingScreen(),
     ];
   }

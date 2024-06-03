@@ -1,7 +1,10 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_getx_base/theme/theme_helper.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:like_button/like_button.dart';
@@ -83,35 +86,74 @@ class buildItemHostelMain extends StatelessWidget {
               Positioned(
                 top: 8,
                 right: 8,
-                child: LikeButton(
-                  onTap: (isLiked) async {
-                    // if (isFavor == false) {
-                    //   favoriteController.setTourFavorite(tourModel.idTour ?? "");
-                    // } else {
-                    //   favoriteController
-                    //       .removeTourFavourite(tourModel.idTour ?? "");
-                    // }
-                    return Future.value(!isLiked);
-                  },
-                  isLiked: isFavor,
-                  mainAxisAlignment: MainAxisAlignment.end,
+                child: Container(
+                  padding: getPadding(all: 2),
+                  decoration: BoxDecoration(
+                    color: appTheme.gray300,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: LikeButton(
+                      onTap: (isLiked) async {
+                        // if (isFavor == false) {
+                        //   favoriteController.setTourFavorite(tourModel.idTour ?? "");
+                        // } else {
+                        //   favoriteController
+                        //       .removeTourFavourite(tourModel.idTour ?? "");
+                        // }
+                        return Future.value(!isLiked);
+                      },
+                      isLiked: isFavor,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      size: 32,
+                      circleColor: const CircleColor(
+                        start: Color(0xff00ddff),
+                        end: Color(0xff0099cc),
+                      ),
+                      bubblesColor: const BubblesColor(
+                        dotPrimaryColor: Color(0xff33b5e5),
+                        dotSecondaryColor: Color(0xff0099cc),
+                      ),
+                      likeBuilder: (bool isLiked) {
+                        return Icon(
+                          FontAwesomeIcons.solidHeart,
+                          color: isLiked ? Colors.red : Colors.white,
+                          size: 22,
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: getSize(16),
+                bottom: getSize(8),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  size: 32,
-                  circleColor: const CircleColor(
-                    start: Color(0xff00ddff),
-                    end: Color(0xff0099cc),
-                  ),
-                  bubblesColor: const BubblesColor(
-                    dotPrimaryColor: Color(0xff33b5e5),
-                    dotSecondaryColor: Color(0xff0099cc),
-                  ),
-                  likeBuilder: (bool isLiked) {
-                    return Icon(
-                      FontAwesomeIcons.solidHeart,
-                      color: isLiked ? Colors.red : Colors.white,
-                      size: 22,
-                    );
-                  },
+                  children: [
+                    Text(
+                      hostelModel?.nameHostel ?? '',
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      textAlign: TextAlign.left,
+                      style: appController.isDarkModeOn.value
+                          ? AppStyles.black000Size18Fw500FfNunito
+                          : AppStyles.white000Size18Fw500FfNunito,
+                    ),
+                    SizedBox(
+                      height: getSize(4),
+                    ),
+                    Text(
+                      hostelModel?.address ?? '',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.left,
+                      style: appController.isDarkModeOn.value
+                          ? AppStyles.black000Size14Fw400FfNunito
+                          : AppStyles.white000Size14Fw400FfNunito,
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -121,54 +163,50 @@ class buildItemHostelMain extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        hostelModel?.nameHostel ?? '',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        textAlign: TextAlign.left,
-                        style: appController.isDarkModeOn.value
-                            ? AppStyles.white000Size16Fw500FfNunito
-                            : AppStyles.black000Size16Fw500FfNunito,
+                      Flexible(
+                        flex: 4,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              '4.1 km away from you',
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
+                              textAlign: TextAlign.left,
+                              style: appController.isDarkModeOn.value
+                                  ? AppStyles.botTitle000Size14Fw400FfNunito
+                                  : AppStyles.titleSearchSize14Fw400FfNunito,
+                            ),
+                            SizedBox(
+                              height: getSize(4),
+                            ),
+                            Text(
+                              'There are 3 spacious and airy rooms',
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                              textAlign: TextAlign.left,
+                              style: appController.isDarkModeOn.value
+                                  ? AppStyles.white000Size14Fw400FfNunito
+                                  : AppStyles.black000Size14Fw400FfNunito,
+                            ),
+                          ],
+                        ),
                       ),
-                      SizedBox(
-                        height: getSize(8),
-                      ),
-                      Text(
-                        hostelModel?.address ?? '',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.left,
-                        style: appController.isDarkModeOn.value
-                            ? AppStyles.white000Size14Fw400FfNunito
-                            : AppStyles.black000Size14Fw400FfNunito,
-                      ),
-                      SizedBox(
-                        height: getSize(8),
-                      ),
-                      Text(
-                        '4.1 km away from you',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        textAlign: TextAlign.left,
-                        style: appController.isDarkModeOn.value
-                            ? AppStyles.botTitle000Size14Fw400FfNunito
-                            : AppStyles.titleSearchSize14Fw400FfNunito,
-                      ),
-                      SizedBox(
-                        height: getSize(4),
-                      ),
-                      Text(
-                        hostelModel?.phoneNub ?? '',
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.left,
-                        style: appController.isDarkModeOn.value
-                            ? AppStyles.white000Size14Fw400FfNunito
-                            : AppStyles.black000Size14Fw400FfNunito,
+                      Flexible(
+                        flex: 1,
+                        child: Container(
+                          padding: getPadding(all: 4),
+                          decoration: BoxDecoration(
+                            color: appTheme.gray300,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text('\$ 120'),
+                        ),
                       ),
                     ],
                   ),

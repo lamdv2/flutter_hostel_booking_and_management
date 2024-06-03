@@ -37,14 +37,14 @@ class HomeController extends GetxController
   final List<String> bottomNavSelectedIconPaths = [
     ImageConstant.iconBottomHomeBold,
     ImageConstant.iconBottomEventBold,
-    ImageConstant.iconBottomRewardBold,
+    ImageConstant.icMessage,
     ImageConstant.iconBottomProfileBold,
   ];
 
   final List<String> imagePaths = [
     ImageConstant.iconBottomHome,
     ImageConstant.iconBottomEvent,
-    ImageConstant.iconBottomReward,
+    ImageConstant.icMessage,
     ImageConstant.iconBottomProfile,
   ];
 

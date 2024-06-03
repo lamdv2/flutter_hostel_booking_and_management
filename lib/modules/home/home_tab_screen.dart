@@ -48,7 +48,6 @@ class HomeTabScreen extends GetView<HomeTabController> {
                       "Popular Hostel",
                       style: AppStyles.black000Size20Fw600FfNunito,
                     ),
-                    SizedBox(height: getSize(16)),
                     SizedBox(
                       height: getSize(196),
                       child: SingleChildScrollView(
@@ -121,7 +120,7 @@ class HomeTabScreen extends GetView<HomeTabController> {
                     ),
                     SizedBox(height: getSize(16)),
                     SizedBox(
-                      height: getSize(338),
+                      height: getSize(298),
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: controller.listTourCurrentTabs.value != null &&

@@ -9,21 +9,21 @@ class HomeTabController extends GetxController
   final listTourCurrentTabs = Rxn<List<HostelModel>>(
     [
       HostelModel(
-        nameHostel: "nameHostel",
+        nameHostel: "NameHostel",
         address: "address",
         phoneNub: "phoneNub",
         isActive: true,
         idUSer: "idUSer",
       ),
       HostelModel(
-        nameHostel: "nameHostel",
+        nameHostel: "NameHostel",
         address: "address",
         phoneNub: "phoneNub",
         isActive: true,
         idUSer: "idUSer",
       ),
       HostelModel(
-        nameHostel: "nameHostel",
+        nameHostel: "NameHostel",
         address: "address",
         phoneNub: "phoneNub",
         isActive: true,
